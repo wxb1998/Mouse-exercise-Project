@@ -9,7 +9,7 @@ library(SeuratData)
 library(patchwork)
 set.seed(2)
 
-for (i in c("Blood", "BM", "Intestine", "Liver","Lung", "Spleen", "Testis", "Kidney","SC","Heart","Brain","Muscle",")){ 
+for (i in c("Blood", "BM", "Intestine", "Liver","Lung", "Spleen", "Testis", "Kidney","SC","Heart","Brain","Muscle","Cerebellum")){ 
 tissue <- readRDS(file = paste0("/05_Result/05_single_tissue/",i,"/04_celltype/Combination_celltype.rds"))
 ###Take an group as an sample###
 seu.sub <- subset(tissue, sample %in% c(paste0("YC-",i)))
